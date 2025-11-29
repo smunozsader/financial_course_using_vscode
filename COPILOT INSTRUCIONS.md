@@ -29,18 +29,13 @@ Root/
 │
 ├── Module_01_Setup/           # Environment setup
 ├── Module_02_Python_Fundamentals/
-│   └── congratulations.py     # 🎁 Easter egg for first exercise
 ├── Module_03_Data_Analysis/
 ├── Module_04_DCF_Modeling/
-│   └── dcf_celebration.py     # 🎁 Easter egg for first DCF model
 ├── Module_05_LBO_Modeling/
 ├── Module_06_MA_Analysis/
 ├── Module_07_PE_Modeling/
 ├── Module_08_Advanced_Topics/
-├── Module_09_Projects/
-│
-└── docs/                      # 📁 Internal documentation
-    └── PERSONALIZATION_SUMMARY.md
+└── Module_09_Projects/
 ```
 
 ---
@@ -220,17 +215,12 @@ When Copilot sees these terms, provide finance-appropriate code:
 
 ## ✨ Special Features in This Course
 
-### 1. **Easter Eggs - DO NOT SPOIL!**
-- `Module_02_Python_Fundamentals/congratulations.py` - First exercise surprise
-- `Module_04_DCF_Modeling/dcf_celebration.py` - DCF completion celebration
-- **When editing these files:** Preserve personal messages from Sergio
-
-### 2. **Personal Touch**
+### 1. **Personal Touch**
 - Course is a gift from father (Sergio) to son (Mauricio)
 - Maintain encouraging, professional-yet-warm tone
 - PE Club and Brussels context is important
 
-### 3. **Windows-Focused**
+### 2. **Windows-Focused**
 - All paths use backslashes: `venv\Scripts\activate`
 - PowerShell commands
 - Windows keyboard shortcuts (Ctrl, not Cmd)
