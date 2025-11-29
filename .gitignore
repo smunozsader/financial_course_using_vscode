@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Outputs
+outputs/
+*.xlsx
+*.xlsm
+*.csv
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+
+# Test files
+test_*.py
+*_test.py
