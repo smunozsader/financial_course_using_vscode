@@ -23,6 +23,29 @@ Visual Studio Code (VS Code) is a powerful, free code editor that has become the
 5. **Integration**: Connect to databases, APIs, and cloud services
 6. **Speed**: Calculations run orders of magnitude faster
 
+### Why Python? (And What About Other Tools?)
+
+This course focuses on **Python** because it's the most accessible and versatile language for financial modeling. Python strikes the perfect balance between ease of learning and professional capability - exactly what you need at PE Club.
+
+**That said, quants and financial professionals use various tools:**
+
+- **Python** ⭐ **(This Course)** - Best all-around choice for data analysis, modeling, and automation
+- **R** - Statistical analysis and econometrics (popular in academia and quant research)
+- **SQL** - Database queries and data extraction (essential for working with financial databases)
+- **C++/C#** - High-frequency trading and performance-critical systems
+- **MATLAB** - Quantitative research (still used in some hedge funds and academic settings)
+- **Julia** - Emerging high-performance language for computational finance
+- **Excel/VBA** - Still widely used in traditional finance (you already know this!)
+
+**Why we're starting with Python:**
+- Most in-demand skill for modern finance roles
+- Gentlest learning curve for beginners
+- 80% of what you need for PE analysis
+- Largest community and best resources
+- Perfect foundation for learning other languages later
+
+**Future courses could cover:** SQL for financial databases, R for advanced statistics, or building high-performance trading systems. But Python first - it's the gateway to everything else.
+
 ### Installation Guide
 
 #### Step 1: Install VS Code
