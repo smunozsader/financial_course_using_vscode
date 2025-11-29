@@ -1,14 +1,25 @@
 # Advanced Financial Modeling Course
 ## Investment Banking & Private Equity Focus
 
+### 💝 A Personal Gift
+
+**Created by:** Sergio Muñoz de Alba Medrano  
+**Dedicated to:** Mauricio Muñoz de Alba Montiel  
+**For:** Excellence in Private Equity at PE Club, Brussels
+
+---
+
 ### Course Overview
-This comprehensive course teaches you how to leverage Visual Studio Code and Python for advanced financial modeling in Investment Banking and Private Equity. You'll learn industry-standard techniques, build sophisticated models, and master the tools used by top-tier financial professionals.
+This comprehensive course teaches you how to leverage Visual Studio Code and Python for advanced financial modeling in Investment Banking and Private Equity. Specifically designed for PE professionals who want to combine traditional finance expertise with modern technical skills.
+
+You'll learn industry-standard techniques, build sophisticated models, and master the tools used by top-tier financial professionals - all while working at one of Europe's leading PE firms.
 
 ### Prerequisites
-- Basic understanding of finance and accounting
+- Basic understanding of finance and accounting ✅ (You already have this from PE Club!)
 - Familiarity with Excel (we'll transition those skills to Python)
 - No prior programming experience required
 - Windows PC (Windows 10/11) - course instructions are Windows-focused
+- **Recommended:** GitHub Copilot subscription ($10/month) for AI-assisted learning
 
 ### Course Structure
 

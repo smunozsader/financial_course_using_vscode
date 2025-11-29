@@ -229,6 +229,17 @@ Compare the valuations.
 
 ### Next Steps
 
+**🎊 CONGRATULATIONS! You built your first DCF model!**
+
+**Before moving on, run this special celebration:**
+```bash
+python dcf_celebration.py
+```
+
+Your father has a very special message for you! 🎁💝
+
+---
+
 Continue to: `Module_05_LBO_Modeling/01_LBO_Overview.md`
 
 ---
