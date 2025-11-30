@@ -1,20 +1,77 @@
-# Tutorial 4: Building a DCF Model in VS Code
+# Tutorial 4: Building a DCF Model in VS Code - Real PE Work! 💼
+
+> **Personal Note to Mauricio**: This is it - the big one! 🎯 DCF valuation is THE foundation of investment banking and private equity. At PE Club Brussels, you'll value companies this way weekly. But here's your advantage: while others build DCFs in Excel (slow, error-prone, not reproducible), you'll build them in Python (fast, scalable, professional). This tutorial will make you the valuation expert on your team! - Dad ❤️
+
+---
+
+## 📊 Progress Tracker
+
+**Where you are in the course:**
+- ✅ Tutorial 1: VS Code Basics (Complete!)
+- ✅ Tutorial 2: GitHub & Copilot (Complete!)
+- ✅ Tutorial 3: Data Analysis (Complete!)
+- 🔥 **Tutorial 4: Building DCF Models (You are here!)**
+- ⬜ Tutorial 5: Power User Skills
+
+**Course completion: 60% → 80%** 🎯
+
+---
 
 ## 🎯 What You'll Learn (120 minutes)
 
-Build a professional Discounted Cash Flow (DCF) valuation model from scratch:
-- DCF theory and methodology
-- Step-by-step model construction
-- Using VS Code for financial modeling
-- GitHub Copilot to accelerate development
-- Sensitivity analysis and scenario testing
-- Real company valuation example
-- Professional output and reporting
+**Build a professional Discounted Cash Flow (DCF) valuation model from scratch:**
 
-**Prerequisites**: 
-- Completed Tutorials 1-3
-- Basic understanding of corporate finance
-- Python and Pandas knowledge
+**✅ DCF Fundamentals**
+- [ ] Understand DCF methodology deeply
+- [ ] Calculate Free Cash Flows correctly
+- [ ] Determine WACC (cost of capital)
+- [ ] Compute terminal value (perpetuity & multiples)
+- [ ] Bridge from enterprise to equity value
+
+**✅ Python Implementation**
+- [ ] Build DCF model programmatically
+- [ ] Create reusable valuation functions
+- [ ] Implement sensitivity analysis
+- [ ] Generate scenario tables
+- [ ] Automate entire valuation process
+
+**✅ Professional Skills**
+- [ ] Use Copilot to accelerate model building
+- [ ] Create presentation-ready output
+- [ ] Build valuation dashboards
+- [ ] Export results to Excel for clients
+- [ ] Version control your models with Git
+
+**✅ Real-World Application**
+- [ ] Value an actual company
+- [ ] Test different scenarios (base/bull/bear)
+- [ ] Perform sensitivity analysis
+- [ ] Generate investment recommendation
+- [ ] Create executive summary
+
+**💡 Why This Matters at PE Club Brussels**: 
+DCF is the gold standard for company valuation. Master this, and you'll evaluate any deal confidently. Python DCFs are superior to Excel: they're faster, reproducible, scalable to multiple companies, and impress tech-forward investors. This is the skill that separates good analysts from great ones! 🚀
+
+---
+
+## 📝 Prerequisites
+
+**Before starting:**
+- ✅ Completed Tutorial 1 (VS Code Basics)
+- ✅ Completed Tutorial 2 (GitHub & Copilot)
+- ✅ Completed Tutorial 3 (Data Analysis with Pandas)
+- ✅ Understanding of corporate finance basics
+- ✅ Familiarity with DCF concepts (if not, we'll review!)
+
+**New Concepts (we'll learn together!):**
+- ⬜ Free Cash Flow calculations
+- ⬜ WACC computation
+- ⬜ Terminal value methods
+- ⬜ Sensitivity analysis
+- ⬜ Scenario modeling
+
+**⏱️ Estimated Time**: 120 minutes (longest tutorial - worth it!)
+**☕ Suggested**: Have coffee/snacks ready. This is intense but incredibly rewarding!
 
 ---
 

@@ -1,152 +1,599 @@
-# Tutorial 3: VS Code Data Analysis with Python
+# Tutorial 3: Data Analysis with Python - Your PE Superpower 📊
+
+> **Personal Note to Mauricio**: Welcome to the fun part! 🎉 You've learned VS Code and Git - now you'll learn what makes Python AMAZING for finance: data analysis! At PE Club Brussels, you'll analyze mountains of data: company financials, market trends, portfolio performance. Excel is great, but Python + Pandas is **100x more powerful**. This is where you'll truly shine! - Dad ❤️
+
+---
+
+## 📊 Progress Tracker
+
+**Where you are in the course:**
+- ✅ Tutorial 1: VS Code Basics (Complete!)
+- ✅ Tutorial 2: GitHub & Copilot (Complete!)
+- 🔥 **Tutorial 3: Data Analysis (You are here!)**
+- ⬜ Tutorial 4: Building DCF Models
+- ⬜ Tutorial 5: Power User Skills
+
+**Course completion: 40% → 60%** 🎯
+
+---
 
 ## 🎯 What You'll Learn (90 minutes)
 
-Master data analysis in VS Code using:
-- Pandas for financial data manipulation
-- Excel integration for corporate finance
-- Data visualization with Matplotlib & Plotly
-- Interactive Jupyter notebooks
-- Real financial statement analysis
-- Stock market data analysis
+**By the end of this tutorial, you'll be able to:**
 
-**Prerequisites**: 
-- Completed Tutorials 1 & 2
-- Python environment configured
-- Basic Python knowledge
+**✅ Data Analysis Fundamentals**
+- [ ] Use Pandas to manipulate financial data (THE key skill!)
+- [ ] Read Excel files and CSV data into Python
+- [ ] Clean and prepare messy financial data
+- [ ] Calculate financial ratios and metrics
+- [ ] Group, filter, and aggregate data like SQL
+
+**✅ Financial Statement Analysis**
+- [ ] Load real company financial statements
+- [ ] Calculate margins, growth rates, and returns
+- [ ] Analyze trends over time
+- [ ] Compare companies side-by-side
+- [ ] Automate ratio calculations
+
+**✅ Data Visualization**
+- [ ] Create professional charts with Matplotlib
+- [ ] Build interactive dashboards with Plotly
+- [ ] Visualize financial trends
+- [ ] Create presentation-ready graphics
+- [ ] Export charts for reports
+
+**✅ Jupyter Notebooks**
+- [ ] Use interactive notebooks in VS Code
+- [ ] Combine code, analysis, and documentation
+- [ ] Run code cell-by-cell for exploration
+- [ ] Create analysis reports you can share
+- [ ] Work like a data scientist!
+
+**💡 Why This Matters at PE Club Brussels**: 
+Excel is limited to ~1 million rows. Python handles BILLIONS. Excel formulas break easily. Python is reproducible. Excel is manual. Python is automated. When deal teams spend hours in Excel, you'll finish in minutes with Python. This is your competitive advantage! 🚀
 
 ---
 
-## Part 1: Setting Up Data Analysis Environment (15 minutes)
+## 📝 Prerequisites
 
-### Install Required Libraries
+**Before starting:**
+- ✅ Completed Tutorial 1 (VS Code Basics)
+- ✅ Completed Tutorial 2 (GitHub & Copilot)
+- ✅ Python environment working
+- ✅ Basic Python knowledge (variables, functions, loops)
 
-Open VS Code terminal (`Ctrl+``):
+**New Tools (we'll install today!):**
+- ⬜ Pandas (Excel on steroids!)
+- ⬜ NumPy (numerical computing)
+- ⬜ Matplotlib & Plotly (visualizations)
+- ⬜ Jupyter (interactive notebooks)
+- ⬜ yfinance (market data access)
+
+**⏱️ Estimated Time**: 90 minutes (take breaks!)
+**☕ Suggested**: Have coffee ready. You'll be amazed by what you build!
+
+---
+
+## Part 1: Setting Up Data Analysis Environment - Power Tools! (15 minutes)
+
+> 💡 **What we're installing**: Think of it like equipping your office. Pandas = Your analyst. NumPy = Your calculator. Matplotlib = Your graphic designer. Jupyter = Your interactive whiteboard. Together, they make you unstoppable!
+
+### Step 1: Install Python Data Science Stack
+
+**Open VS Code terminal**: `Ctrl+``
+
+**⚠️ Important**: Make sure you're in your project folder!
 
 ```bash
-# Activate virtual environment
-venv\Scripts\activate
-
-# Install data analysis stack
-pip install pandas numpy matplotlib seaborn plotly yfinance openpyxl jupyter ipykernel
-
-# Verify installations
-python -c "import pandas; print(f'Pandas {pandas.__version__}')"
-python -c "import matplotlib; print(f'Matplotlib {matplotlib.__version__}')"
-python -c "import yfinance; print('yfinance installed!')"
+# Navigate to your project
+cd Documents/financial-modeling
 ```
 
-### Install VS Code Extensions
+**Install libraries** (this takes 2-3 minutes):
 
-`Ctrl+Shift+X` → Search and install:
-- ✅ **Jupyter** (Microsoft)
-- ✅ **Jupyter Keymap** (Microsoft)
-- ✅ **Jupyter Notebook Renderers** (Microsoft)
-- ✅ **Data Wrangler** (Microsoft) - Excel-like data viewer!
+```bash
+# Core data analysis
+pip install pandas numpy
 
-### Configure Jupyter in VS Code
+# Visualization libraries
+pip install matplotlib seaborn plotly
 
-1. Press `Ctrl+Shift+P`
-2. Type: **"Python: Select Interpreter"**
-3. Choose your venv interpreter: `.\venv\Scripts\python.exe`
+# Financial data
+pip install yfinance
+
+# Excel integration
+pip install openpyxl xlrd
+
+# Jupyter notebooks
+pip install jupyter ipykernel
+
+# Optional but useful
+pip install pandas-datareader requests
+```
+
+**Expected output** (will show progress bars):
+```
+Collecting pandas
+  Downloading pandas-2.1.3-cp311-cp311-win_amd64.whl (11.5 MB)
+Successfully installed pandas-2.1.3 numpy-1.26.2 ...
+```
+
+**✅ Verify everything installed:**
+
+```bash
+# Check Pandas
+python -c "import pandas as pd; print(f'✅ Pandas {pd.__version__}')"
+
+# Check NumPy
+python -c "import numpy as np; print(f'✅ NumPy {np.__version__}')"
+
+# Check Matplotlib
+python -c "import matplotlib; print(f'✅ Matplotlib {matplotlib.__version__}')"
+
+# Check yfinance
+python -c "import yfinance as yf; print('✅ yfinance installed!')"
+```
+
+**Expected output**:
+```
+✅ Pandas 2.1.3
+✅ NumPy 1.26.2
+✅ Matplotlib 3.8.2
+✅ yfinance installed!
+```
+
+**🎉 If you see checkmarks → All libraries installed! You're ready to analyze!**
 
 ---
 
-## Part 2: Create Your First Jupyter Notebook (15 minutes)
+### Step 2: Install VS Code Data Science Extensions
 
-### Create Notebook
+**Open Extensions**: `Ctrl+Shift+X`
 
-1. `Ctrl+Shift+P` → **"Create: New Jupyter Notebook"**
-2. Save as: `financial_analysis_intro.ipynb`
+**Search and install these (in order):**
 
-### Notebook Interface Tour
+1. **Jupyter** (by Microsoft)
+   - Enables notebooks in VS Code
+   - ✅ Install
 
-**Key Components:**
-- 📝 **Code Cell**: Write Python code
-- 📄 **Markdown Cell**: Write notes, explanations
-- ▶️ **Run Button**: Execute cell
-- ➕ **Add Cell**: Insert new cell
+2. **Jupyter Keymap** (by Microsoft)
+   - Familiar Jupyter shortcuts
+   - ✅ Install
 
-### Your First Analysis
+3. **Jupyter Notebook Renderers** (by Microsoft)
+   - Better visualizations
+   - ✅ Install
 
-**Cell 1** (Markdown - click `+Markdown`):
-```markdown
-# My First Financial Analysis
+4. **Data Wrangler** (by Microsoft)
+   - Excel-like data viewer (game changer!)
+   - ✅ Install
 
-Learning data analysis in VS Code!
+5. **Python** (by Microsoft)
+   - Already installed from Tutorial 1!
+   - ✅ Should show "Installed"
 
-## Objectives
-1. Load financial data
-2. Calculate metrics
-3. Visualize results
+**🖼️ [Screenshot: Extensions panel with all data science extensions]**
+
+**⏳ Installation takes ~2 minutes total**
+
+**After installation**:
+- You might see "Reload Required" → Click it!
+- VS Code restarts with new superpowers! ⚡
+
+---
+
+### Step 3: Configure Jupyter in VS Code
+
+**Make sure VS Code knows which Python to use:**
+
+1. Press `Ctrl+Shift+P` (Command Palette)
+2. Type: `Python: Select Interpreter`
+3. Choose the one showing your project path
+   - Example: `Python 3.11.6 ('financial-modeling': venv)`
+   - Or: `.\venv\Scripts\python.exe`
+
+**🖼️ [Screenshot: Interpreter selection showing venv]**
+
+**Why this matters**: Jupyter will use this Python environment, ensuring all your installed libraries are available!
+
+---
+
+### Step 4: Test Jupyter Installation
+
+**Create a test notebook:**
+
+1. `Ctrl+Shift+P` → Type: `Create: New Jupyter Notebook`
+2. A new `.ipynb` file opens!
+3. In the first cell, type:
+   ```python
+   import pandas as pd
+   import numpy as np
+   import matplotlib.pyplot as plt
+   
+   print("🎉 Jupyter is working!")
+   print(f"Pandas: {pd.__version__}")
+   ```
+4. Press `Shift+Enter` to run the cell
+
+**Expected output**:
+```
+🎉 Jupyter is working!
+Pandas: 2.1.3
 ```
 
-**Cell 2** (Code):
+**✅ If you see output → Jupyter works! Close this test notebook (don't save).**
+
+---
+
+### ✅ Environment Setup Checkpoint:
+- [ ] All Python libraries installed (pandas, numpy, matplotlib, etc.)?
+- [ ] VS Code Jupyter extensions installed?
+- [ ] Python interpreter selected?
+- [ ] Test notebook runs successfully?
+- [ ] Can you see output when running cells?
+
+**If 4/5 checked → Your data science environment is ready! Let's analyze! 📊**
+
+---
+
+## 🚨 Troubleshooting: Installation Issues
+
+### Problem 1: "pip install" fails with errors
+
+**Common error**: `ERROR: Could not find a version that satisfies the requirement...`
+
+**Solutions**:
+
+**Solution 1** (Update pip):
+```bash
+python -m pip install --upgrade pip
+```
+
+**Solution 2** (Install one at a time):
+```bash
+# Instead of all at once, install individually
+pip install pandas
+pip install numpy
+pip install matplotlib
+# etc.
+```
+
+**Solution 3** (Check Python version):
+```bash
+python --version
+```
+- Need Python 3.8 or higher!
+- If lower, reinstall Python from python.org
+
+### Problem 2: Import errors in Jupyter
+
+**Symptoms**: `ModuleNotFoundError: No module named 'pandas'`
+
+**Cause**: Jupyter using wrong Python interpreter
+
+**Fix**:
+1. In Jupyter notebook, top-right corner shows Python version
+2. Click it → "Select Another Kernel"
+3. Choose your venv Python
+4. Run cell again
+
+### Problem 3: Jupyter notebook won't run cells
+
+**Symptoms**: Click "Run" but nothing happens
+
+**Fixes**:
+
+**Fix 1**: Install ipykernel
+```bash
+pip install ipykernel
+python -m ipykernel install --user
+```
+
+**Fix 2**: Restart VS Code
+- File → Exit
+- Reopen VS Code
+- Try again
+
+**Fix 3**: Check kernel status
+- Look for kernel indicator (top right of notebook)
+- Should say "Python 3.x.x"
+- If it says "Select Kernel", click and choose Python
+
+### Problem 4: Matplotlib plots don't show
+
+**Add this at top of notebook**:
 ```python
+%matplotlib inline
+import matplotlib.pyplot as plt
+```
+
+**This tells Jupyter to show plots inside the notebook!**
+
+---
+
+## Part 2: Create Your First Jupyter Notebook - Interactive Analysis! (15 minutes)
+
+> 💡 **What is a Jupyter Notebook?** Think of it like a lab notebook for data analysis. You write code in "cells", run them one at a time, see results immediately, and add notes. At PE Club, you'll use notebooks to explore data, test ideas, and create analysis reports!
+
+### Step 1: Create Your First Financial Analysis Notebook
+
+**Create new notebook:**
+
+1. Press `Ctrl+Shift+P`
+2. Type: `Create: New Jupyter Notebook`
+3. Press `Enter`
+4. New notebook opens!
+5. Save it: `Ctrl+S` → Name it: `financial_analysis_intro.ipynb`
+
+**🖼️ [Screenshot: New Jupyter notebook interface in VS Code]**
+
+---
+
+### Step 2: Understanding the Notebook Interface
+
+**Key components you'll see:**
+
+**📝 Code Cell** (default):
+- Where you write Python code
+- Has `[  ]` on the left
+- Turns to `[*]` when running
+- Turns to `[1]` after running (execution number)
+
+**📄 Markdown Cell**:
+- For notes, headings, explanations
+- Supports formatting (bold, italic, lists)
+- Click "Code" dropdown → Select "Markdown"
+
+**Toolbar buttons**:
+- ▶️ **Run** - Execute current cell
+- ➕ **+Code** - Add code cell
+- ➕ **+Markdown** - Add markdown cell
+- **Clear Outputs** - Remove all output
+- **Variables** - See all variables (super useful!)
+- **Restart** - Restart Python kernel
+
+**🎯 Try clicking each button to see what it does!**
+
+---
+
+### Step 3: Build Your First Financial Analysis
+
+**Cell 1 - Header (Markdown cell)**:
+
+1. Click `+ Markdown` button
+2. Type this:
+
+```markdown
+# My First Financial Analysis with Python
+
+**Created by**: Mauricio Gonzalez  
+**For**: PE Club Brussels  
+**Date**: November 2025
+
+## Objectives
+1. Load and manipulate financial data
+2. Calculate key financial metrics
+3. Visualize trends
+4. Build foundation for PE analysis
+
+## Tools Used
+- **Pandas**: Data manipulation
+- **NumPy**: Numerical computing
+- **Matplotlib**: Visualizations
+```
+
+3. Press `Shift+Enter` to render it
+4. **See beautiful formatted text!** ✨
+
+---
+
+**Cell 2 - Import Libraries (Code cell)**:
+
+```python
+# Import essential libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import warnings
 
-print("✅ Libraries loaded!")
-print(f"Pandas version: {pd.__version__}")
+# Configure display
+pd.set_option('display.max_columns', None)  # Show all columns
+pd.set_option('display.precision', 2)        # 2 decimal places
+plt.style.use('seaborn-v0_8-darkgrid')      # Professional chart style
+warnings.filterwarnings('ignore')            # Hide warnings
+
+# Verify imports
+print("✅ Libraries loaded successfully!")
+print(f"📊 Pandas version: {pd.__version__}")
+print(f"🔢 NumPy version: {np.__version__}")
+print("\n🚀 Ready to analyze financial data!")
 ```
 
-Run: `Shift+Enter`
+**Press `Shift+Enter`**
 
-**Cell 3** (Code):
-```python
-# Create sample financial data
-data = {
-    'Year': [2020, 2021, 2022, 2023, 2024],
-    'Revenue': [100, 120, 150, 180, 220],  # millions
-    'EBITDA': [20, 28, 38, 50, 66],
-    'Net_Income': [10, 15, 22, 32, 45]
-}
-
-df = pd.DataFrame(data)
-print(df)
+**Expected output**:
 ```
+✅ Libraries loaded successfully!
+📊 Pandas version: 2.1.3
+🔢 NumPy version: 1.26.2
 
-Run: `Shift+Enter`
-
-**Cell 4** (Code):
-```python
-# Calculate growth rates
-df['Revenue_Growth'] = df['Revenue'].pct_change() * 100
-df['EBITDA_Margin'] = (df['EBITDA'] / df['Revenue']) * 100
-
-df
+🚀 Ready to analyze financial data!
 ```
-
-Run: `Shift+Enter`
-
-🎉 **You just did financial analysis in VS Code!**
-
-### Jupyter Keyboard Shortcuts
-
-| Shortcut | Action |
-|----------|--------|
-| `Shift+Enter` | Run cell, move to next |
-| `Ctrl+Enter` | Run cell, stay in place |
-| `Alt+Enter` | Run cell, insert below |
-| `A` | Insert cell above |
-| `B` | Insert cell below |
-| `DD` | Delete cell |
-| `M` | Convert to Markdown |
-| `Y` | Convert to Code |
-| `Ctrl+S` | Save notebook |
 
 ---
 
-## Part 3: Working with Excel Data (20 minutes)
+**Cell 3 - Create Sample Financial Data (Code)**:
 
-### Create Sample Financial Statement
+```python
+# Create sample company financial data (in millions)
+# This represents a growing tech company
 
-**Create Excel file**: `financial_statements.xlsx`
+financial_data = {
+    'Year': [2020, 2021, 2022, 2023, 2024],
+    'Revenue': [100, 120, 150, 180, 220],
+    'COGS': [40, 46, 56, 68, 84],
+    'Operating_Expenses': [35, 38, 42, 48, 55],
+    'EBITDA': [25, 36, 52, 64, 81],
+    'Depreciation': [5, 8, 10, 12, 15],
+    'EBIT': [20, 28, 42, 52, 66],
+    'Interest_Expense': [3, 4, 5, 5, 6],
+    'EBT': [17, 24, 37, 47, 60],
+    'Taxes': [5, 7, 11, 14, 18],
+    'Net_Income': [12, 17, 26, 33, 42]
+}
 
-Using Excel:
-- Sheet1: "Income_Statement"
-- Add this data:
+# Convert to Pandas DataFrame (like an Excel table, but better!)
+df = pd.DataFrame(financial_data)
+
+# Display the data
+print("📊 Financial Statements (Millions USD)")
+print("="*60)
+df
+```
+
+**Press `Shift+Enter`**
+
+**You'll see a beautiful table!** 📊
+
+---
+
+**Cell 4 - Calculate Financial Ratios (Code)**:
+
+```python
+# Calculate key financial metrics
+# (This is what you'll do daily at PE Club!)
+
+# Growth Rates (Year-over-Year)
+df['Revenue_Growth_%'] = df['Revenue'].pct_change() * 100
+
+# Profit Margins
+df['Gross_Margin_%'] = ((df['Revenue'] - df['COGS']) / df['Revenue']) * 100
+df['EBITDA_Margin_%'] = (df['EBITDA'] / df['Revenue']) * 100
+df['Net_Margin_%'] = (df['Net_Income'] / df['Revenue']) * 100
+
+# Return on Sales
+df['ROS_%'] = (df['EBIT'] / df['Revenue']) * 100
+
+# Display results
+print("📈 Financial Metrics Dashboard")
+print("="*60)
+display(df[['Year', 'Revenue', 'Revenue_Growth_%', 'EBITDA_Margin_%', 'Net_Margin_%']])
+
+print("\n💡 Insights:")
+print(f"   • Revenue CAGR: {((df['Revenue'].iloc[-1] / df['Revenue'].iloc[0]) ** (1/4) - 1) * 100:.1f}%")
+print(f"   • Average EBITDA Margin: {df['EBITDA_Margin_%'].mean():.1f}%")
+print(f"   • 2024 Net Margin: {df['Net_Margin_%'].iloc[-1]:.1f}%")
+```
+
+**Press `Shift+Enter`**
+
+**🎉 You just did financial analysis in seconds that would take 10 minutes in Excel!**
+
+---
+
+**Cell 5 - Visualize Trends (Code)**:
+
+```python
+# Create professional visualization
+fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+
+# Chart 1: Revenue and Net Income Growth
+axes[0].plot(df['Year'], df['Revenue'], marker='o', linewidth=2, label='Revenue', color='#2E86AB')
+axes[0].plot(df['Year'], df['Net_Income'], marker='s', linewidth=2, label='Net Income', color='#A23B72')
+axes[0].set_title('Revenue & Net Income Growth', fontsize=14, fontweight='bold')
+axes[0].set_xlabel('Year')
+axes[0].set_ylabel('Millions USD')
+axes[0].legend()
+axes[0].grid(True, alpha=0.3)
+
+# Chart 2: Profit Margins Trend
+axes[1].plot(df['Year'], df['Gross_Margin_%'], marker='o', label='Gross Margin', color='#06A77D')
+axes[1].plot(df['Year'], df['EBITDA_Margin_%'], marker='s', label='EBITDA Margin', color='#F18F01')
+axes[1].plot(df['Year'], df['Net_Margin_%'], marker='^', label='Net Margin', color='#C73E1D')
+axes[1].set_title('Profitability Margins Trend', fontsize=14, fontweight='bold')
+axes[1].set_xlabel('Year')
+axes[1].set_ylabel('Margin %')
+axes[1].legend()
+axes[1].grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+
+print("✅ Charts generated! Professional quality ready for presentations!")
+```
+
+**Press `Shift+Enter`**
+
+**🎨 Beautiful charts appear! These are presentation-ready!**
+
+---
+
+### Step 4: Understanding Jupyter Keyboard Shortcuts
+
+**Essential shortcuts (learn these!):**
+
+```
+═══════════════════════════════════════════════════════════
+        JUPYTER NOTEBOOK SHORTCUTS
+═══════════════════════════════════════════════════════════
+
+RUNNING CELLS
+Shift+Enter       Run cell, move to next
+Ctrl+Enter        Run cell, stay in current
+Alt+Enter         Run cell, insert new below
+
+EDITING CELLS
+Enter             Edit mode (cursor in cell)
+Esc               Command mode (cell selected, not editing)
+
+ADDING/DELETING CELLS (in Command mode - press Esc first!)
+A                 Insert cell Above
+B                 Insert cell Below
+DD                Delete cell (press D twice)
+Z                 Undo cell deletion
+
+CELL TYPE (in Command mode)
+M                 Convert to Markdown
+Y                 Convert to Code
+
+NAVIGATION
+↑/↓               Move between cells
+Ctrl+Home         Go to first cell
+Ctrl+End          Go to last cell
+
+SAVING
+Ctrl+S            Save notebook
+
+═══════════════════════════════════════════════════════════
+💡 TIP: Press Esc to enter Command mode, then use shortcuts!
+      Press Enter to go back to Edit mode
+═══════════════════════════════════════════════════════════
+```
+
+**🎯 Practice these shortcuts right now!**
+
+1. Press `B` (add cell below)
+2. Press `M` (convert to markdown)
+3. Type: `## This is practice`
+4. Press `Shift+Enter`
+5. Press `DD` to delete the cell
+6. Press `Z` to undo deletion!
+
+**Master these and you'll fly through analysis! ⚡**
+
+---
+
+### ✅ Jupyter Notebook Checkpoint:
+- [ ] Can you create a new Jupyter notebook?
+- [ ] Can you run cells with Shift+Enter?
+- [ ] Can you add Markdown cells for notes?
+- [ ] Can you create and display a DataFrame?
+- [ ] Can you generate charts?
+- [ ] Can you use keyboard shortcuts (A, B, DD, M, Y)?
+
+**If 5/6 checked → You're a Jupyter user! This is huge! 🎉**
+
+---
 
 | Account | 2022 | 2023 | 2024 |
 |---------|------|------|------|

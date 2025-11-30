@@ -1,22 +1,84 @@
-# Tutorial 5: VS Code Power User for Finance
+# Tutorial 5: VS Code Power User - Maximum Productivity! ⚡
+
+> **Personal Note to Mauricio**: Congratulations on making it this far! 🎉 You've learned VS Code, Git, data analysis, and DCF modeling. Now let's turn you into a VS Code NINJA! 🥷 These advanced techniques will make you 10x faster than anyone else at PE Club Brussels. While others struggle with basic tasks, you'll execute complex operations in seconds. This is where you become unstoppable! - Dad ❤️
+
+---
+
+## 📊 Progress Tracker
+
+**Where you are in the course:**
+- ✅ Tutorial 1: VS Code Basics (Complete!)
+- ✅ Tutorial 2: GitHub & Copilot (Complete!)
+- ✅ Tutorial 3: Data Analysis (Complete!)
+- ✅ Tutorial 4: Building DCF Models (Complete!)
+- 🔥 **Tutorial 5: Power User Skills (Final Tutorial!)**
+
+**Course completion: 80% → 100%** 🎯
+
+---
 
 ## 🎯 What You'll Learn (90 minutes)
 
-Master advanced VS Code techniques to become 10x more productive:
-- Advanced keyboard shortcuts and navigation
-- Multi-cursor editing for financial models
-- Code snippets and custom templates
-- Workspace organization and settings
-- Debugging Python financial code
-- Extensions ecosystem for finance
-- Remote development and collaboration
-- Automation and task running
-- Professional workflow optimization
+**Master advanced VS Code features for maximum productivity:**
 
-**Prerequisites**: 
-- Completed Tutorials 1-4
-- Comfortable with basic VS Code usage
-- Ready to level up!
+**✅ Advanced Editing Techniques**
+- [ ] Multi-cursor editing mastery
+- [ ] Advanced find and replace with regex
+- [ ] Column selection and editing
+- [ ] Quick text transformations
+- [ ] Smart code navigation
+
+**✅ Code Snippets & Templates**
+- [ ] Create custom code snippets for finance
+- [ ] Build financial model templates
+- [ ] Use pre-built snippet libraries
+- [ ] Share snippets with team
+- [ ] Speed up repetitive coding 100x
+
+**✅ Debugging Like a Pro**
+- [ ] Set breakpoints and inspect variables
+- [ ] Step through code line-by-line
+- [ ] Debug financial calculations
+- [ ] Find and fix errors quickly
+- [ ] Use debug console effectively
+
+**✅ Git Advanced Workflows**
+- [ ] Branching strategies for finance projects
+- [ ] Handling merge conflicts
+- [ ] Git history and blame analysis
+- [ ] Stashing changes temporarily
+- [ ] Collaborative development workflows
+
+**✅ Productivity Optimization**
+- [ ] Custom keyboard shortcuts
+- [ ] Essential extensions for finance professionals
+- [ ] Workspace configurations
+- [ ] Task automation
+- [ ] Time-saving tips and tricks
+
+**💡 Why This Matters at PE Club Brussels**: 
+Speed is everything in finance. While deal teams scramble to deliver analysis, you'll have it done in half the time with twice the quality. These power user skills make the difference between being good and being exceptional. Master these, and you'll be the analyst everyone wants on their deal! 🚀
+
+---
+
+## 📝 Prerequisites
+
+**Before starting:**
+- ✅ Completed Tutorials 1-4 (essential!)
+- ✅ Comfortable with VS Code basics
+- ✅ Using VS Code regularly for coding
+- ✅ Familiar with Git workflows
+- ✅ Ready to level up!
+
+**What makes you ready:**
+- ⬜ Can navigate VS Code confidently
+- ⬜ Use basic keyboard shortcuts daily
+- ⬜ Write and run Python code regularly
+- ⬜ Commit to Git frequently
+- ⬜ Want to work faster and smarter
+
+**⏱️ Estimated Time**: 90 minutes (final push!)
+**☕ Suggested**: Energy drink ready! We're going fast! ⚡
 
 ---
 
