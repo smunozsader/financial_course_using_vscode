@@ -738,7 +738,9 @@ print(f"Average Equity Value:       ${avg_equity_value:,.0f}M")
 
 #### Excel Integration - Reading and Writing Files
 
-**Create a new file: `07_excel_integration.py`**\n\n```python
+**Create a new file: `07_excel_integration.py`**
+
+```python
 """
 Excel Integration - Seamless Import/Export
 
