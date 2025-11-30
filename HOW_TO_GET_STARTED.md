@@ -58,39 +58,64 @@ Your father **strongly recommends** subscribing to GitHub Copilot ($10/month):
 ## 📁 What's in This Folder
 
 ```
-Your Course/
-├── START_HERE.md              👈 Begin here! Personal letter from your father
-├── QUICK_START_GUIDE.md       👈 Then this - 30-min setup
-├── README.md                  Course overview
+📁 2025. CURSO FINANCIAL MODELING MAU/
 │
-├── Tutorials/                 5 hands-on VS Code tutorials
-│   ├── 01_VS_Code_Basics.md
-│   ├── 02_GitHub_Copilot_Hands_On.md
-│   ├── 03_VS_Code_Data_Analysis.md
-│   ├── 04_Building_DCF_with_VS_Code.md
-│   └── 05_VS_Code_Power_User.md
+├── 📄 START_HERE.md ⭐ Begin here! Personal letter from your father
+├── 📄 QUICK_START_GUIDE.md → Then this - 30-min setup
+├── 📄 HOW_TO_GET_STARTED.md → You are reading this now
+├── 📄 README.md → Complete course overview
 │
-├── Module_01_Setup/           Environment setup
-├── Module_02_Python_Fundamentals/
-├── Module_03_Data_Analysis/
-├── Module_04_DCF_Modeling/
-├── Module_05_LBO_Modeling/
-├── Module_06_MA_Analysis/
-├── Module_07_PE_Modeling/
-├── Module_08_Advanced_Topics/
-└── Module_09_Projects/        Real-world case studies
+├── 📁 Tutorials/ ⭐ 5 hands-on VS Code tutorials (COMPLETE FIRST!)
+│   ├── 01_VS_Code_Basics.md (2-3 hrs)
+│   ├── 02_GitHub_Copilot_Hands_On.md (3-4 hrs)
+│   ├── 03_VS_Code_Data_Analysis.md (2-3 hrs)
+│   ├── 04_Building_DCF_with_VS_Code.md (3-4 hrs)
+│   └── 05_VS_Code_Power_User.md (2-3 hrs)
+│
+├── 📁 Module_01_Setup/ → Environment setup
+├── 📁 Module_02_Python_Fundamentals/ → Python basics
+├── 📁 Module_03_Data_Analysis/ → Pandas & data
+├── 📁 Module_04_DCF_Modeling/ → Valuation models
+├── 📁 Module_05_LBO_Modeling/ → PE buyout analysis
+├── 📁 Module_06_MA_Analysis/ → M&A models
+├── 📁 Module_07_PE_Modeling/ → PE fund modeling
+├── 📁 Module_08_Advanced_Topics/ → Monte Carlo, ML, APIs
+└── 📁 Module_09_Projects/ → Real-world case studies
+
+Each module contains:
+- .md files (lessons with theory and examples)
+- .pdf files (same content, for reading offline)
+- solutions.py (working code examples)
+- Special files (celebration scripts, model templates)
 ```
 
 ---
 
 ## 🎯 Your Learning Journey
 
-**Week 1-2:** VS Code basics + Python fundamentals  
-**Week 3-4:** DCF modeling  
-**Week 5-6:** LBO modeling (perfect for PE Club!)  
-**Week 7-8:** Advanced topics & real projects  
+**Recommended Path:**
 
-**Total time:** 40-50 hours (your pace, your schedule)
+1. **Week 1-2: Tutorials & Setup** (Foundation)
+   - Tutorial 01: VS Code Basics → Master your editor
+   - Tutorial 02: Git & Copilot → Version control + AI
+   - Module 01-02: Setup + Python fundamentals
+
+2. **Week 2-3: Data & First Model** (Building Skills)
+   - Tutorial 03: Data Analysis → Pandas mastery
+   - Tutorial 04: DCF Building → Your first valuation
+   - Module 03-04: Data analysis + DCF modeling
+
+3. **Week 4-5: Advanced Models** (PE Focus)
+   - Module 05: LBO modeling (PERFECT for PE Club!)
+   - Module 06-07: M&A + PE fund analysis
+
+4. **Week 6-8: Mastery & Portfolio** (Professional Level)
+   - Tutorial 05: Power User → Advanced techniques
+   - Module 08: Advanced topics (ML, APIs, automation)
+   - Module 09: Real-world projects
+
+**Total time commitment:** 40-50 hours (your pace, your schedule)
+**Outcome:** Professional Python + finance skills, GitHub portfolio
 
 ---
 
