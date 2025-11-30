@@ -4,28 +4,136 @@
 
 ### Introduction
 
-In this module, you'll learn Python programming specifically tailored for financial modeling. Unlike general Python courses, we focus exclusively on what you need for Investment Banking and Private Equity work.
+**Welcome to Python programming for finance!**
+
+In this module, you'll learn Python from scratch - no programming experience required. Unlike generic Python courses, every example here comes from real financial modeling scenarios you'll encounter at PE Club.
+
+**What makes this different?**
+- Every concept explained with finance examples (not abstract programming theory)
+- Build financial models from day one
+- Learn by doing - you'll write code, not just read it
+- Direct Excel-to-Python translations
+
+**What you'll learn:**
+- How to store financial data (numbers, text, lists of cash flows)
+- How to perform calculations (like Excel formulas, but more powerful)
+- How to build reusable financial functions
+- How to create company models that update automatically
+
+**Before you start:**
+- ✅ Complete Module 01 (Python environment set up)
+- ✅ Have VS Code open with your `financial-modeling` folder
+- ✅ Virtual environment activated (you should see `(venv)` in terminal)
+
+**How to use this module:**
+1. Read each section
+2. Type (don't copy-paste!) the code into a new Python file
+3. Run it and see the results
+4. Experiment - change numbers and see what happens
+5. Complete the practice exercises
+
+Let's start coding! 🚀
+
+### Setting Up Your First Python File
+
+**Before we dive into code, let's create a proper workspace:**
+
+1. **Create a new Python file:**
+   - In VS Code Explorer (left sidebar), right-click on your `financial-modeling` folder
+   - Select "New File"
+   - Name it: `Module_02_Python_Fundamentals/python_basics.py`
+   - If the folder doesn't exist, create it first: Right-click → New Folder → `Module_02_Python_Fundamentals`
+
+2. **What you'll see:**
+   - A blank file opens in the editor
+   - VS Code recognizes it's Python (see "Python" in bottom-right)
+   - You might see the Python version displayed
+
+3. **Test your setup:**
+   
+   Type this simple code:
+   ```python
+   print("Hello from Python!")
+   print("Ready to build financial models!")
+   ```
+
+4. **Run it:**
+   - Click the ▶️ play button (top-right)
+   - Terminal opens and shows: 
+     ```
+     Hello from Python!
+     Ready to build financial models!
+     ```
+
+**Congratulations!** You just ran your first Python program. Every financial model starts this way - one line of code at a time.
+
+---
 
 ### Python Data Types for Finance
 
+**What are data types?**
+Think of them as different types of information you'd put in Excel cells:
+- Numbers (like revenue: 1,500,000)
+- Text (like company name: "Apple Inc.")
+- Lists (like years: 2021, 2022, 2023, 2024, 2025)
+
+Python has specific ways to work with each type. Let's learn them through finance examples.
+
 #### Numbers in Finance
+
+**Two types of numbers in Python:**
+
+1. **Integers** (whole numbers) - for counting things
+2. **Floats** (decimal numbers) - for money, percentages, ratios
+
+**Create a new file: `numbers_example.py`**
+
+Type this code (read the comments - anything after `#` is just explanation):
 
 ```python
 # Integers - for counting items, years, periods
-shares_outstanding = 1000000
+shares_outstanding = 1000000  # 1 million shares
 projection_years = 5
 transaction_year = 2025
 
+print(f"Shares: {shares_outstanding:,}")  # :, adds commas
+print(f"Years to project: {projection_years}")
+
 # Floats - for monetary values, rates, multiples
 stock_price = 45.67
-interest_rate = 0.065  # 6.5%
+interest_rate = 0.065  # 6.5% (in decimal form)
 ev_ebitda_multiple = 12.5
-revenue = 1_500_000_000  # $1.5B (underscores for readability)
+revenue = 1_500_000_000  # $1.5B (underscores for readability - Python ignores them)
 
-# Financial calculations
+print(f"Stock price: ${stock_price}")
+print(f"Interest rate: {interest_rate:.1%}")  # :.1% formats as percentage
+
+# Financial calculations (just like Excel formulas!)
 market_cap = shares_outstanding * stock_price
-print(f"Market Cap: ${market_cap:,.2f}")
+print(f"\nMarket Cap: ${market_cap:,.2f}")  # :,.2f = comma separator, 2 decimals
 ```
+
+**Run this file** (▶️ button)
+
+**What you should see:**
+```
+Shares: 1,000,000
+Years to project: 5
+Stock price: $45.67
+Interest rate: 6.5%
+
+Market Cap: $45,670,000.00
+```
+
+**Try this:**
+- Change `stock_price` to 50.00 and run again
+- See how market cap updates automatically? That's the power of code!
+
+**Key takeaways:**
+- `=` assigns a value to a variable (like naming an Excel cell)
+- `*` multiplies (just like Excel)
+- `print()` displays results (like viewing a cell value)
+- `f"..."` creates formatted strings (mix text and numbers)
 
 #### Strings - for labels and formatting
 
